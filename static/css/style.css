@@ -10,106 +10,35 @@
     font-size: 50px;
   }
   
-  /* Style the top navigation bar */
-  /* .topnav {
-    overflow: hidden;
-    background-color: rgb(114, 89, 160);
+  #header {
+    background: rgb(223, 214, 214);
+  }
+   
+  .prediction {
+    font-size: 26px;
+    color: #eee;
+    z-index: 10;
+    position: relative;
   }
   
-  .topnav a {
-    float: left;
-    width: 200px;
-    display: block;
-    color: #f3eded;
-    text-align: center;
-    opacity: .9;
-    line-height: 40px;
-    padding: 4px 16px;
-    font-size: 15px;
-    text-decoration: none;
-  }
-  
-   ul li a:hover {
-    background-color: rgb(22, 97, 66);
-  } */
 
 body {
 
     padding: 0;
     margin: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
-    color: rgb(228, 231, 219);
+    color: rgb(13, 17, 1);
     background: whitesmoke ;
   
   }
-  
-  h1 {
-    padding: 20px 0;
-    margin: 0;
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: rgb(12, 1, 1);
-    text-align: center;
-  
-  }
-  
-  #header {
-    background: rgb(223, 214, 214);
-  }
-  
-  #images {
-    float: left;
-    margin-right: 10px;
-  }
-  
-  #content {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
   Table {
-    width: 100%;
+    width: 150%;
     border-collapse: collapse;
   } 
   
   
-    
-  /* #navbar
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        
-      }
-      
-      li {
-        float: left;
-        padding: 20px 20px;
-      }
-      
-      li a {
-        display: block;
-        color: rgba(255, 255, 255, 0.836);
-        text-align: center;
-        padding: 10px 170px;
-        text-decoration: none;
-        background-color: rgba(151, 64, 147, 0.822);
-      }
-      
-      li a:hover {
-        background-color: rgba(21, 7, 59, 0.575);
-      } */
-
-      .prediction {
-        font-size: 26px;
-        color: #eee;
-        z-index: 10;
-        position: relative;
-      }
 
       .table-responsive {
         overflow-x:auto; 
@@ -124,22 +53,73 @@ body {
       table.dataframe { 
         margin-left: auto;
         margin-right: auto;
-        background-color: rgb(160, 179, 109);
+        background-color: rgb(239, 242, 243);
         text-align:left;
        
       }
     
+      tr:nth-child(even) {
+        background-color: #ecf3f0;}
+
       h1 {text-align:Center;}
     
+    table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color:#f2f2f2}
+  
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  
+  h1 {
+    padding: 20px 0;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: rgb(12, 1, 1);
+    text-align: center;
+  
+  }
+  
+ 
+  #images {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  #content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+   }
+   
+   .center {
+    height: auto;
+    object-fit: fill;
+    }
     
-      tr:nth-child(even) {
-        background-color: #c8ce8f;}
 
-         body {
-            background-image: url("https://elegant-gifts.co/wp-content/uploads/2017/03/Spiegelau-Vino-Grande-White-Wine-Glasses-Set-of-4-03.jpg");
-            height: 500px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-           
-          } 
+  body {
+    background-image: url(http://www.winegiftcentre.com/wp-content/uploads/2015/08/Glass-Wine-Decanter-with-Ice-Pocket-Self-cooling1.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        } 

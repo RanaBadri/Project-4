@@ -77,19 +77,6 @@ def model():
     
     return render_template("analysis.html", prediction = prediction)
 
-# ---------------------------------------------------------
-
-
-    session.close()
-
-    return jsonify(table_results)
-
-
-
-    session.close()
-
-    return jsonify(year_results)
-
 
 @app.route('/table')
 def maketable():
