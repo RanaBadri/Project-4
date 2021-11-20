@@ -40,7 +40,7 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
     line-height: 150%;
-    color: rgb(77, 42, 42);
+    color: rgb(228, 231, 219);
     background: whitesmoke ;
   
   }
@@ -50,13 +50,13 @@ body {
     margin: 0;
     margin-bottom: 20px;
     font-size: 28px;
-    color: #eee;
+    color: rgb(12, 1, 1);
     text-align: center;
   
   }
   
   #header {
-    background: rgb(73, 8, 8);
+    background: rgb(223, 214, 214);
   }
   
   #images {
@@ -104,6 +104,13 @@ body {
         background-color: rgba(21, 7, 59, 0.575);
       } */
 
+      .prediction {
+        font-size: 26px;
+        color: #eee;
+        z-index: 10;
+        position: relative;
+      }
+
       .table-responsive {
         overflow-x:auto; 
         overflow-y:auto;
@@ -117,7 +124,7 @@ body {
       table.dataframe { 
         margin-left: auto;
         margin-right: auto;
-        background-color: aliceblue;
+        background-color: rgb(160, 179, 109);
         text-align:left;
        
       }
@@ -126,13 +133,13 @@ body {
     
     
       tr:nth-child(even) {
-        background-color: #f2f2f2;}
+        background-color: #c8ce8f;}
 
-        body {
+         body {
             background-image: url("https://elegant-gifts.co/wp-content/uploads/2017/03/Spiegelau-Vino-Grande-White-Wine-Glasses-Set-of-4-03.jpg");
             height: 500px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
            
-          }
+          } 

@@ -1,5 +1,7 @@
 # Project-4
 
+The data was downloaded from UCI Machine Learning Repository. This dataset is related to the white variants of the Portuguese "Vinho Verde" wine. Reference [Cortez et al., 2009] for more details. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.). This dataset can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are much more average wines than excellent or poor ones represented). Outlier detection algorithms was used to detect the few excellent or poor wines. Also, our analysis has shown not all input variables has an impact or were relevance.
+
 In each dataset, there’re 12 variables: 
 
 Acidity’s importance to wine cannot be understated, as it contributes freshness, acts as a preserving agent, and helps, notably, with microbial stability. Anna Katharine Mansfield, an associate professor of enology at [Cornell University](https://grapesandwine.cals.cornell.edu/), says, “They’re two different measures: concentration of acid (TA), versus acid strength (pH).”

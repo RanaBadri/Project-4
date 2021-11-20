@@ -1,45 +1,46 @@
-<!DOCTYPE HTML>
-<meta charset="utf-8">
-<html>
-<head>
+<html lang="en-us">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>white Wine Analysis</title>
+  
+    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  
     <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-
-</head>
-
-<div class="topnav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="  text-white py-2">
-          <a class="navbar-brand" href="/"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+  </head>
+  
+  <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Back</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
             
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Plots
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/bubble">Charts</a></li>
-                  <li><a class="dropdown-item" href="/table">Data</a></li>
-                 
-                </ul>
-              </li>    
-            </div>
-        </div>
-    </nav>
-</div>  
+          <li class="nav-item">
+            <a class="nav-link" href="/analysis">Analysis</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/table">Data</a>
+          </li>
+  
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
 
 <div class="header">
     <h1>White Wine Data</h1>
@@ -51,16 +52,15 @@
       This dataset can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are much more average wines than excellent or poor ones represented). Outlier detection algorithms was used to detect the few excellent or poor wines. Also, our analysis has shown not all input variables has an impact or were relevant.</p>
 </div>
 
-<body>
-    <div id=topnav></div>
-    <br>
-    <br>
-    <ul>
+<div class="container">
+  
+
+  <h2>Data</h2>
+  <hr>
+  
         
-        
-     </ul>
-<div id="content">
-<div class="table-responsive">
+  <div id="content">
+    <div class="table-responsive">
      {{table|safe}}
  </div>
 

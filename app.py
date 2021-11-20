@@ -19,26 +19,77 @@ data= pd.read_sql("select * FROM whitewine", con=engine)
 def index():
     return render_template('index.html')
 
-# @app.route("/")
-# def bubble():
-#     return render_template()
 
+@app.route("/analysis")
+def actors():
+    return render_template("analysis.html")
 
-# @app.route('/plot')
-# def getData():
+@app.route("/model" , methods=["POST"])
+def model():
+
+    volatile_acidity = float(request.form["volatile_acidity"])
+    #alcohol = float(request.form["alcohol"])
+
+    alcohol = request.form["alcohol"]
+    if alcohol == "":
+        alcohol = 68000
+    alcohol = float(alcohol)
+
+    chlorides = request.form["chlorides"]
+    if chlorides == "":
+        chlorides = 6
+    chlorides = float(chlorides)
+
+    total_sulfur_dioxide = request.form["total_sulfur_dioxide"]
+    if total_sulfur_dioxide == "":
+        total_sulfur_dioxide = 36000
+
+    residual_sugar = request.form["residual_sugar"]
+    if residual_sugar == "":
+        residual_sugar = 36000
+        
+    # prediction = 0
+
+    X = [[volatile_acidity, residual_sugar, chlorides, total_sulfur_dioxide, alcohol]]
+
+    print(X)
+
+    filename = 'static/winequality.sav'
+    loaded_model = pickle.load(open(filename, 'rb'))
+
+    filename1 = 'static/Scaler.sav'
+    loaded_scaler = pickle.load(open(filename1, 'rb'))
     
-#     return yeargroupedcrime.to_json()
+    X=loaded_scaler.transform(X)
 
+    prediction = loaded_model.predict(X)[0]
 
-# @app.route('/plot2')
-# def getData2():
-#     return regiongrouped.to_json()
+    #prediction = "{0:,.2f}".format(prediction)
 
-# @app.route('/plot3')
-# @app.route('/plot3/<year>')
-# def getData3(year=None):
+    print(prediction)
     
-#     return newDF.tail(50).to_json(orient='values')
+    if prediction==0:
+        prediction="bad"
+    
+    if prediction==1:
+        prediction="good"
+    print(prediction)
+    
+    return render_template("analysis.html", prediction = prediction)
+
+# ---------------------------------------------------------
+
+
+    session.close()
+
+    return jsonify(table_results)
+
+
+
+    session.close()
+
+    return jsonify(year_results)
+
 
 @app.route('/table')
 def maketable():
